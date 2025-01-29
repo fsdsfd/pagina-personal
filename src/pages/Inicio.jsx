@@ -29,7 +29,7 @@ const Inicio = () => {
         <main className="main-inicio">
             <div className="content-inicio">
             <img src="./imgs/programacion.jpg" alt="" className="img-fluid w-100 custom-gradient content-inicio__img"/>
-        <h1 className="fs-2 content-inicio__h1">Servicio de creación y mantenimento de páginas web</h1>
+        <h1 className="fs-2 content-inicio__h1">Servicio de creación y mantenimiento de páginas web</h1>
             </div>
             <p ref={refTexto} className={`texto ${visible ? "visible" : ""}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil sit obcaecati impedit laborum recusandae dolores consequuntur, fuga quibusdam omnis. Qui ratione accusamus cupiditate unde adipisci ipsum ullam libero repudiandae!</p>
             <div className="carrusel-container">
@@ -37,7 +37,22 @@ const Inicio = () => {
             <Carrusel></Carrusel>
             </div>
             </div>
-           
+            <div className="caracteristicas-container">
+                <div className="caracteristicas-container__textos">
+                    <h1 className="caracteristicas-container__h1">¿Por qué confiar en mis servicios?</h1>
+                <p className="caracteristicas-container__p">1</p>
+
+                </div>
+                <div className="caracteristicas-container__textos">
+                    <h1 className="caracteristicas-container__h1">¿Por qué confiar en mis servicios?</h1>
+                <p className="caracteristicas-container__p">1</p>
+
+                </div>
+                <div className="caracteristicas-container__textos">
+                    <h1 className="caracteristicas-container__h1">¿Por qué confiar en mis servicios?</h1>
+                <p className="caracteristicas-container__p">1</p>
+
+                </div>            </div>
         </main>
 
     </div>

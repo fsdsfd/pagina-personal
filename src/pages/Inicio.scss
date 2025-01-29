@@ -53,13 +53,22 @@
     display: flex;
     justify-content: center;
     position: relative;
+    
     top: 5rem;
     width: 100%;
-    border: red 1px solid;
+    border: blue 1px solid;
 }
 .carrusel{
+    max-width: 50rem;
+    border: red 1px solid;
+    position: relative;
+    margin-bottom: 7rem;
+}
+.caracteristicas-container{
     display: flex;
-    justify-content: center;
-    max-width: 20rem;
-    object-fit: cover;
+    justify-content: space-around;
+    &__textos{
+        width: 20rem;
+        border: 1px solid red;
+    }
 }
