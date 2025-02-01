@@ -2,10 +2,13 @@ import React from 'react'
 import NavItem from './NavItem.jsx'
 import { Link } from 'react-router'
 import menuItems from '../constants/menuItems.js'
-
-export const NavBar = () => {
+import "./NavBar.scss"
+import UseVisible from '../hooks/UseVisible.jsx'
+export const NavBar = ({ isVisible }) => {
   return (
-    <nav className="navbar navbar-expand-lg bg-info-subtle">
+    <nav className={`navbar nav-h navbar-expand-lg bg-info-subtle  ${
+        isVisible ? "opacity-0" : "opacity-100"
+      }`}>
     <div className="container-fluid">
       <Link className="navbar-brand" to="/">
         Tomás
