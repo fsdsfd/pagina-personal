@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  font-family: "Montserrat", serif;
 
+}
 .content-inicio{
     background-color: #010101;
     color: whitesmoke;
     z-index: 10;
-
     display: flex;
     flex-direction: column;
     &__h1{
@@ -12,7 +15,7 @@
         text-align: center;
         opacity: 0;
         transform: translateY(50px); 
-        animation: aparecer 4s ease-out forwards;
+        animation: aparecer 6s ease-out forwards;
     }
 }
 .custom-gradient {
@@ -34,7 +37,7 @@
     font-size: 1.2rem;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 4s ease-out, transform 4s ease-out;
+    transition: opacity 6s ease-out, transform 6s ease-out;
   }
   .texto.visible {
     opacity: 1;
@@ -117,6 +120,50 @@
     }
   }
 }
+.educacion-hr{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 5rem;
+  height: 1.5rem;
+  &__img{
+    width: 2rem;
+    margin-right: .5rem;
+  }
+  &__h1{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4D4D4D;
+  }
+  &__hr{
+    align-self: center;    
+    width: 70%;
+    height: 1px;
+    margin-left: 1rem;
+    background-color: #E5E5E5;
+  }
+}
+.nav-container{
+  display: flex;
+  justify-content: center;
+}
+.nav-boton{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+  &:hover{
+    background-color: #212529;
+    color: white;
+  }
+  &.selected{
+    background-color: #212529;
+    color: white;
+  }
+
+}
 .contacto-pre{
   &__1{
     &__h1{
@@ -128,3 +175,63 @@
   }
 
 }
+.dos-partes-texto{
+  height: 20rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  &__principal{
+    border-right: 1px solid #E5E5E5;
+    margin: 1rem;
+    position: relative;
+    margin-right: 2rem;
+    &__h1{
+      font-weight: 900;
+      font-size: 3.5rem;
+      color: #48CFAE;
+      margin-right: 1rem;
+
+    }
+    &__img{
+      width: 5rem;
+      margin-right: 1rem;
+      &__container{
+        display: flex;
+        justify-content: end;
+      }
+
+    }
+  }
+  &__p{
+    &__container{
+      display: flex;
+      flex-direction: column;
+    }
+    &__res{
+      width: 35rem;
+      margin: 1rem;
+      font-weight: 500;
+      color: #A1A1A1;
+      font-style: italic;
+      text-align: start;
+      font-size: 0.8rem;
+      
+    }
+    width: 35rem;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #A1A1A1;
+    font-style: italic;
+    text-align: start;
+  }
+}
+.imagen-proceso{
+  margin-bottom: 5rem;
+  width: 100%;
+}
+

@@ -1,0 +1,112 @@
+.servicios{
+    display: flex;
+    flex-direction: row;
+    scale: 0.9;
+
+    &__col{
+        &-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin-bottom: 1.75rem;
+
+        }
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 1rem;
+        &__h1{
+            color: #4D4D4D;
+            font-size: 2rem;
+        }
+        &__p{
+            font-size: 1.2rem;
+        }
+
+    }
+    &__img{
+        &__1{
+            scale: 0.7;
+            width: 6rem;
+            padding: 1rem;
+            background-color: #48CFAE;
+
+            border-radius: 10rem;
+        }
+        &__2{
+            scale: 0.57;
+            width: 11rem;
+            background-color: #48CFAE;
+            padding: 1rem;
+            border-radius: 9rem;
+            position: relative;
+            bottom: 0.1rem;
+        }
+    }
+    &__col-2{
+        &-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            margin-bottom: 1rem;
+        }
+        display: flex;
+        flex-direction: column;
+ 
+        &__h1{
+            color: #4D4D4D;
+            font-size: 2rem;
+        }
+        &__p{
+            font-size: 1rem;
+        }
+        &__img{
+            &__1{
+                background-color: #48CFAE;
+                scale: 0.64;
+                width: 10rem;
+                padding: 1rem;
+                border-radius: 9rem;
+                margin-right: 1rem;
+                position: relative;
+                bottom: 0.4rem;
+            }
+            &__2{
+                background-color: #48CFAE;
+                scale: 0.64;
+                width: 10rem;
+                padding: 1rem;
+                border-radius: 9rem;
+                margin-right: 1rem;
+            }
+
+ 
+        }
+    }
+
+}
+.columna-izq{
+    width: 50%;
+    transform: translateX(-50px); /* Se inicia desplazada a la izquierda */
+    opacity: 0;                  /* Oculta al inicio */
+    transition: transform 7s ease, opacity 7s ease;
+    text-align: end;
+    margin: 1rem;
+    &.visible{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.columna-der{
+    width: 50%;
+    transform: translateX(50px);
+    opacity: 0;
+    text-align: start;
+    margin: 1rem;
+
+    transition: transform 7s ease, opacity 7s ease;
+    &.visible{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
