@@ -53,7 +53,12 @@
         }
     }
     @media (max-width: 576px ) {
-
+        &__hr{
+            border: 1px solid #1F2625;
+            display: none;
+            width: 50%;
+            margin-left: 2rem;
+        }
         &__inputs-row{
             display: flex;
             flex-direction: column;
