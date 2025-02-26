@@ -144,7 +144,7 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
       </nav>
 
       {/* Sección de skills */}
-      <div className="p-4 border rounded-lg shadow-md bg-white">
+      <div className="pad-4 border container-habilidades rounded-lg shadow-md bg-white">
         {categoryComponents[selectedCategory].component}
       </div>
     </div>

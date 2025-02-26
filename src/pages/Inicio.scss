@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body{
   font-family: "Montserrat", serif;
-
+  margin: 0;
 }
 
 .content-inicio{
@@ -10,7 +10,7 @@ body{
     z-index: 10;
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
     &__h1{
         position: relative;
         bottom: 5rem;
@@ -236,7 +236,9 @@ body{
   margin-bottom: 5rem;
   width: 100%;
 }
-
+.pad-4{
+  padding: 4px;
+}
 @media (max-width: 576px) {
   .caracteristicas-container{
     display: flex;
@@ -258,13 +260,20 @@ body{
 
         }
 }
+.pad-4{
+  padding: 0;
+}
+.container-habilidades{
+  width: 100%;
+  display: flex;
+}
 .nav-boton{
   display: flex;
   align-items: center;
   background-color: white;
   color: black;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-  width: 100%;
+  width: 7rem;
   &:hover{
     background-color: #212529;
     color: white;
