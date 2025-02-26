@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import emailjs from "@emailjs/browser";
-
+import "./Contacto.scss"
 const Contacto = () => {
     useEffect(() => {
         document.title = 'Tomás- Contacto'
@@ -22,18 +22,34 @@ const Contacto = () => {
       );
   };
   return (
-    <div> 
-      <form ref={form} onSubmit={enviarCorreo}>
-    <label>Nombre:</label>
-    <input type="text" name="user_name" required />
+    <div className='contacto'> 
+<hr className='contacto__hr'/>
+      <form ref={form} onSubmit={enviarCorreo} className='contacto__form'>
+        <div className='contacto__inputs-row'>
+        <div className='contacto__inputs-container'>
+        <label className='contacto__inputs-container__label'>Nombre *</label>
+    <input type="text" name="user_name" className='contacto__inputs-container__input' required />
+        </div>
+        <div className='contacto__inputs-container'>
+      <label className='contacto__inputs-container__label'>Asunto *</label>
+    <input type="text" name="asunto" className='contacto__inputs-container__input' required />
 
-    <label>Email:</label>
-    <input type="email" name="user_email" required />
+      </div>
+      <div className='contacto__inputs-container'>
+      <label className='contacto__inputs-container__label'>Email *</label>
+    <input type="email" name="user_email" className='contacto__inputs-container__input' required />
 
-    <label>Mensaje:</label>
-    <textarea name="message" required></textarea>
+      </div>
+        </div>
 
-    <button type="submit">Enviar</button>
+      <div className='contacto__inputs-container'>
+      <label className='contacto__inputs-container__label'>Mensaje *</label>
+    <textarea name="message" className='contacto__inputs-container__textarea' cols={30} rows={10} required></textarea>
+
+      </div>
+    <div className='contacto__inputs-container__boton-container'>
+    <button type="submit" className='contacto__inputs-container__boton-container__boton'>ENVIAR MENSAJE</button>
+    </div>
   </form>
   </div>
   )

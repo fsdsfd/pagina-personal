@@ -1,0 +1,34 @@
+.calificacion-general{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 7s ease, opacity 7s ease;
+    &.visible{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.calificacion{
+    background-color: #48CFAE;
+    border-radius: 3px;
+    color: white;
+    scale: .7;
+    text-align: center;
+    height: 6rem;
+    width: 7.5rem;
+    margin-left: 3rem;
+
+
+
+    &__container{
+        scale: .9;
+
+        &__h1{
+            font-weight: 500;
+            height: 4rem;
+        }
+        &__p{
+            font-weight: 700;
+            background-color: #5BD4B6;
+        }
+    }
+}

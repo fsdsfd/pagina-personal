@@ -21,3 +21,30 @@
         scale: 0.9;
     }
 }
+@media (max-width: 576px ) {
+    .habilidades{
+        color: #4D4D4D;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        opacity:0;
+        transform: translateY(120px); 
+        transition: opacity 2s ease-in-out, transform 3s ease-in-out;
+        &.visible{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .habilidad{
+        width: 20rem;
+        padding: 2rem;
+        scale: .9;
+        &__titulo{
+            font-size: 1.2rem;
+        }
+        &__meter{
+            scale: 0.9;
+        }
+    }
+
+}

@@ -4,38 +4,33 @@ import { Link } from 'react-router'
 import menuItems from '../constants/menuItems.js'
 import "./NavBar.scss"
 import UseVisible from '../hooks/UseVisible.jsx'
-export const NavBar = ({ isVisible }) => {
+export const NavBar = () => {
   return (
-    <nav className={`navbar nav-h navbar-expand-lg bg-info-subtle  ${
-        isVisible ? "opacity-0" : "opacity-100"
-      }`}>
-    <div className="container-fluid">
-      <Link className="navbar-brand" to="/">
-        Tomás
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-
-          {
-            menuItems.map( (item, idx) => (
-              <NavItem objItem={item} key={idx + item.nombre} />
-            ))
-          }           
-         
-        </ul>
-      </div>
+    <>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-position ">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#inicio">Tomás</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link" href="#resume">Resume</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#habilidades">Habilidades</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+    </>
   )
 }

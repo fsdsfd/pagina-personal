@@ -8,6 +8,7 @@ import DesarrolloWeb from "../Components/DesarrolloWeb";
 import DisenoGrafico from "../Components/DisenoGrafico";
 import Idiomas from "../Components/Idiomas";
 import Servicios from "../Components/Servicios";
+import Educacion from "../Components/Educacion";
 
 const Inicio = () => {
     const isVisible = UseVisible(); 
@@ -44,10 +45,11 @@ const Inicio = () => {
   return (
     <div className="body-inicio">
                 <PantallaCarga></PantallaCarga>
+                <NavBar></NavBar>
         <main className="main-inicio">
             <div className="content-inicio">
             <img src="./imgs/programacion.jpg" alt="" className="img-fluid w-100 custom-gradient content-inicio__img"/>
-        <h1 className="fs-2 content-inicio__h1">Servicio de creación y mantenimiento de páginas web</h1>
+        <h1 className="fs-2 content-inicio__h1" id="inicio">Servicio de creación y mantenimiento de páginas web</h1>
             </div>
             <p ref={refTexto} className={`texto ${visible ? "visible" : ""}`}>Me dedico a la programación Web, experta en tecnologías Web tales como HTML, XHTML, CSS, JavaScript, Ajax, PHP y MySQL.
 
@@ -88,7 +90,7 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
 
             </div>
             <hr className="hr-especial"/>
-            <div className="dos-partes-texto">
+            <div className="dos-partes-texto"  id="resume">
                 <div className="dos-partes-texto__principal">
                   <div  className="dos-partes-texto__principal__img__container">
                   <img src="/imgs/svg-icons/libro.svg" alt="" className="dos-partes-texto__principal__img"/>
@@ -107,17 +109,18 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
                 <h1 className="educacion-hr__h1">Educación</h1>
                 <div className="educacion-hr__hr"></div>
               </div>
+              <Educacion></Educacion>
               <div>
-                
+
               </div>
             <div>
-              <div className="dos-partes-texto">
+              <div className="dos-partes-texto" id="habilidades">
                 <div className="dos-partes-texto__principal">
                   <div  className="dos-partes-texto__principal__img__container">
                   <img src="/imgs/svg-icons/stonks.svg" alt="" className="dos-partes-texto__principal__img"/>
 
                   </div>
-                <h1 className="dos-partes-texto__principal__h1">HABILIDADES</h1>
+                <h1 className="dos-partes-texto__principal__h1" >HABILIDADES</h1>
                 </div>
                 <p className="dos-partes-texto__p">Aptitudes y validaciones destacadas</p>
 
@@ -126,12 +129,12 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
       {/* Navbar */}
       <div className="p-6">
       {/* Navbar */}
-      <nav className="flex gap-4 mb-6 border-b pb-2 nav-container">
+      <nav className="flex gap-1 mb-6 border-b pb-2 nav-container">
         {Object.entries(categoryComponents).map(([key, { name }]) => (
           <button
             key={key}
             onClick={() => setSelectedCategory(key)}
-            className={`px-4 py-2 rounded-lg nav-boton ${
+            className={`px4 py-2 rounded-lg nav-boton ${
               selectedCategory === key ? "bg-blue-500 text-white selected" : ""
             }`}
           >
@@ -148,13 +151,13 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
         </div>
             </div>
             <div>
-            <div className="dos-partes-texto">
+            <div className="dos-partes-texto" id="servicios">
                 <div className="dos-partes-texto__principal">
                   <div  className="dos-partes-texto__principal__img__container">
                   <img src="/imgs/svg-icons/settings.svg" alt="" className="dos-partes-texto__principal__img"/>
 
                   </div>
-                <h1 className="dos-partes-texto__principal__h1">SERVICIOS</h1>
+                <h1 className="dos-partes-texto__principal__h1" >SERVICIOS</h1>
                 </div>
                 <p className="dos-partes-texto__p">Programador web experto en creación de páginas web bajo MySQL, xHTML, CSS, Javascript. Accesibilidad, posicionamiento natural para buscadores y campañas de márketing para Google.</p>
 
@@ -163,7 +166,7 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
             <div>
               <Servicios></Servicios>
             </div>
-            <img src="/imgs/proceso.png" alt="" className="imagen-proceso"/>
+            <img src="/imgs/proceso.png" alt="" className="imagen-proceso hidden-cel"/>
             <div>
             <div className="dos-partes-texto">
                 <div className="dos-partes-texto__principal">
@@ -171,13 +174,12 @@ Mi campo de acción comprende aplicaciones desde sitios Web dinámicos auto-admi
                   <img src="/imgs/svg-icons/mail.svg" alt="" className="dos-partes-texto__principal__img"/>
 
                   </div>
-                <h1 className="dos-partes-texto__principal__h1">CONTACTO</h1>
+                <h1 className="dos-partes-texto__principal__h1" id="contacto">CONTACTO</h1>
                 </div>
                 <p className="dos-partes-texto__p">Presupuestos, preguntas, información? No dude en ponerse en contacto conmigo. Completa el formulario o conectate conmigo a través de whatsapp o redes sociales.</p>
 
               </div>
             <Contacto></Contacto>
-
             </div>
         </main>
 

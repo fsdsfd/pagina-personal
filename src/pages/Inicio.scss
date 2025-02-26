@@ -3,8 +3,9 @@ body{
   font-family: "Montserrat", serif;
 
 }
+
 .content-inicio{
-    background-color: #010101;
+    background-color: #2b2b2b;
     color: whitesmoke;
     z-index: 10;
     display: flex;
@@ -15,7 +16,7 @@ body{
         text-align: center;
         opacity: 0;
         transform: translateY(50px); 
-        animation: aparecer 6s ease-out forwards;
+        animation: aparecer 8s ease-out forwards;
     }
 }
 .custom-gradient {
@@ -235,3 +236,159 @@ body{
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .caracteristicas-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    &__imagenes{
+        max-width: 10rem;
+        margin: 2rem;
+    }
+    &__textos{
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 20rem;
+        box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.75);
+        margin-bottom: 3rem;
+
+        }
+}
+.nav-boton{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  width: 100%;
+  &:hover{
+    background-color: #212529;
+    color: white;
+  }
+  &.selected{
+    background-color: #212529;
+    color: white;
+  }
+
+}
+.hr-especial{
+  position: relative;
+  bottom: 3rem;
+}
+.descripcion-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  align-items: center;
+  &__imagen{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.75);
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+      transform: scale(1.1);
+
+    }
+  }
+  &__textos{
+    color: #B4B4B4;
+    font-style: italic;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    padding: 2rem;
+    &__p{
+      text-shadow: 0px 0px 31px rgba(131, 229, 241, 0.75);
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 2rem;
+
+      &:hover{
+        transform: scale(1.1);
+
+      }
+    }
+  }
+}
+.dos-partes-texto{
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 5rem;
+  &__principal{
+    border-right: 1px solid #E5E5E5;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+    &__h1{
+      font-weight: 900;
+      font-size: 3rem;
+      color: #48CFAE;
+    }
+    &__img{
+      width: 5rem;
+      &__container{
+        display: flex;
+        justify-content: end;
+      }
+
+    }
+  }
+  &__p{
+    width: 20rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #A1A1A1;
+    font-style: italic;
+    text-align: start;
+    &__container{
+      display: flex;
+      flex-direction: column;
+    }
+    &__res{
+      width: 100%;
+      font-weight: 500;
+      color: #A1A1A1;
+      font-style: italic;
+      text-align: start;
+      font-size: 0.75rem;
+      position: relative;
+      bottom: 2rem;
+    }
+
+  }
+}
+.educacion-hr{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 1.5rem;
+  position: relative;
+  right: 4rem;
+  &__img{
+    width: 2rem;
+    margin-right: .5rem;
+  }
+  &__h1{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4D4D4D;
+  }
+  &__hr{
+    align-self: center;    
+    width: 70%;
+    height: 1px;
+    margin-left: 1rem;
+    background-color: #E5E5E5;
+  }
+}
+
+}
